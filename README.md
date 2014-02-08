@@ -1,7 +1,7 @@
-cms
+YAFcms
 ===
-
-基于yaf框架编写的cms程序
+基于yaf写的程序,只是在测试之中
+===
 2014年2月8日 数据表结构建完,数据库字典地址 点击查看
 
 2014年2月7日 更新 前后台 controll分开,前台FController后台BController更新 datebase的Model cache,调整了目录结构,
