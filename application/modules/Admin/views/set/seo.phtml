@@ -1,0 +1,51 @@
+<!doctype html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<link href="<?php echo ADMIN_STATIC_PATH; ?>css/global.css" type="text/css" rel="stylesheet" />
+<script src="<?php echo ADMIN_STATIC_PATH; ?>js/jquery.js" type="text/javascript"></script>
+<script src="<?php echo ADMIN_STATIC_PATH; ?>admin/js/global.js" type="text/javascript"></script>
+<script type="text/javascript">
+	var pKey = "{$_pkey}", urlKey = "{$_ukey}", place = "{$_place}";
+</script>
+<title>Yafcms后台</title>
+</head>
+<body>
+<div class="m">
+	<div class="p">
+		<div class="cc">
+			<form action="index.php?u=setting-seo-ajax-1" method="post">
+                                <div class="tb_t">搜索引擎优化</div>
+                                <div>
+                                    <p class="th">设置这里的标题会替换以下模块页面的模块标题，可以使用 {seo_title} 表示当前的站点名称</p>
+                                    <p class="th">keywords出现在页面头部的 Meta 标签中，用于记录本页面的关键字，多个关键字间请用半角逗号 "," 隔开</p>
+                                    <P class="th">description出现在页面头部的 Meta 标签中，用于记录本页面的概要与描述</P>
+                                </div>
+				<div class="tb_t">SEO设置</div>
+				<table class="tb">
+					<tr>
+						<th class="th">SEO标题(seo_title)</th>
+						<td class="col">{$input[seo_title]}</td>
+					</tr>
+					<tr>
+						<th class="th">SEO关键字(keywords)</th>
+						<td class="col">{$input[seo_keywords]}</td>
+					</tr>
+					<tr>
+						<th class="th">SEO描述(description)</th>
+						<td class="col">{$input[seo_description]}</td>
+					</tr>
+
+					{hook:admin_setting_seo_after.htm}
+
+				</table>
+				<div class="tb_b"><input type="submit" value="&#20445;&#23384;" class="but1" /></div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+twAjax.submit("form:first");
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{$title}</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta content="all" name="robots" /> 
+	<meta name="author" content="YafCms" /> 
+	<meta name="description" content="test" /> 
+	<meta content="Yaf" name="keywords" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{$smarty.const.resource_css}/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="starter-template">
+          <img src="{$smarty.const.resource_img}/ap.jpg"> 
+           
+        <h1>{$msg['title']}</h1>
+        <p >{$msg['pro_start']}</p>
+        <p ><?php echo $msg['pro_now']; ?></p>
+         <p >{$msg['run']}</p>
+	 <p >{$msg['runtime']}</p>
+         <p class="lead" >{$msg['desc']}</p>
+                <p class="lead">{$msg['copyright']}Yaf 2.3.2</p>
+                <p>{$message} </p>
+      </div>
+   <script src="{$smarty.const.resource_js}jquery.min.js"></script> 
+    <script src="{$smarty.const.resource_js}bootstrap.min.js"></script>
+  </body>
+</html>
+
